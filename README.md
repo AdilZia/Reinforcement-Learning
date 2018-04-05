@@ -3,8 +3,6 @@ Achieves 100% winrate after 200 games.
 
 In this project I implemented the Q-Learning reinforcement learning algorithm. 
 
-Reinforcement learning is the branch of machine learning which focuses on how agents can learn how to better perform a specific activity overtime, through many repeated training runs. 
-
 In Q-Learning, the agent aims to learn all the Q-Values, a Q-Value is the value of a state, action pair.
 
 The update rule for Q-Learning is: <br> 
@@ -13,6 +11,8 @@ The update rule for Q-Learning is: <br>
 Where alpha is the learning rate, gamma is the discount factor, R(S) is the reward for state s, and s’ is the subsequent state.
 
 ### How does reinforcement learning work?
+Reinforcement learning is the branch of machine learning which focuses on how agents can learn how to better perform a specific activity overtime, through many repeated training runs.
+
 The key idea behind reinforcement learing is the use of 'rewards' and 'punishments' for certain outcomes. The agents goal is to figure out how to generate the maximum reward. Over many repeated runs, it begins to learn which sequences of events and which actions, generate more rewards, and which generate poor rewards. It then carries out the actions which lead to better rewards more often. This is the basic idea behind how an agent learns the best strategy overtime. 
 
 
