@@ -1,10 +1,10 @@
 # Reinforcement-Learning
 
-This is my solution to the Pacman reinforcement learning project, included in Berkley's CS188 Artificial Intelligence materials.
+This is my solution to the Pacman reinforcement learning project - Included in Berkley's CS188 Artificial Intelligence materials.
 
 In this project I implemented the Q-Learning reinforcement learning algorithm. 
 
-In Q-Learning, the agent aims to learn all the Q-Values, a Q-Value is the value of a state, action pair.
+In Q-Learning, the agent aims to learn all the Q-Values. A Q-Value is the value of a state, action pair.
 
 The update rule for Q-Learning is: <br> 
 **Q(S,a) = Q(S,a) + alpha * (R(S) + gamma * (Max(a)Q(s’,a’) – Q(S,a))**
@@ -13,7 +13,7 @@ Where alpha is the learning rate, gamma is the discount factor, R(S) is the rewa
 
 
 ### Performance:
-The main metric to evaluate performance is the winrate. In this regard, my code performs very well. 
+The main metric to evaluate performance is the winrate. <br>
 After just 100 training runs, I found the average winrate to be 81%.
 
 After 500 games, Pacman will never lose a game. 
