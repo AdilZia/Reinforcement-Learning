@@ -1,5 +1,6 @@
 # Reinforcement-Learning
-Achieves 100% winrate after 200 games.
+
+This is my solution to the Pacman reinforcement learning project, included in Berkley's CS188 Artificial Intelligence materials.
 
 In this project I implemented the Q-Learning reinforcement learning algorithm. 
 
@@ -9,6 +10,15 @@ The update rule for Q-Learning is: <br>
 **Q(S,a) = Q(S,a) + alpha * (R(S) + gamma * (Max(a)Q(s’,a’) – Q(S,a))**
 
 Where alpha is the learning rate, gamma is the discount factor, R(S) is the reward for state s, and s’ is the subsequent state.
+
+
+### Performance:
+The main metric to evaluate performance is the winrate. In this regard, my code performs very well. 
+After just 100 training runs, I found the average winrate to be 81%.
+
+After 500 games, Pacman will never lose a game. 
+
+This is a better result than the standard requirements for the project, which is that Pacman wins 80% of games after 2000 training runs.
 
 ### How does reinforcement learning work?
 Reinforcement learning is the branch of machine learning which focuses on how agents can learn how to better perform a specific activity overtime, through many repeated training runs.
