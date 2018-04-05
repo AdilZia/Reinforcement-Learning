@@ -21,14 +21,14 @@ The key idea behind reinforcement learing is the use of 'rewards' and 'punishmen
 Storage: My Q-Values are stored in self.Q_Table. This is a dictionary. The format is
 {state: {‘North’: Q, ‘East’: Q, ‘South’: Q, ‘West’:Q}}
 
-### ComputeReward(previous_state, current_state)
+### ComputeReward(previous_state, current_state): 
 This function computes the reward for the previous state.
 Quite simply, this is the difference between the current score and the previous score. And if it is the first move of the game, then the reward is just the current score. 
 I found this proved to be a fair reward system for incentivising Pacman’s playstyle. The rewards based on score are as follows:
 
--500 for losing (hitting a ghost)
-+500 for winning (getting the last food)
-+9 for collecting food
+-500 for losing (hitting a ghost) <br>
++500 for winning (getting the last food) <br>
++9 for collecting food <br>
 -1 for anything else
 
 ### setPreviousState(state, action)
