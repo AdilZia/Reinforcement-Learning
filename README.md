@@ -4,6 +4,7 @@ This is my solution to my MSc Coursework in reinforcement learning. You can find
 
 In this project I implemented the Q-Learning reinforcement learning algorithm from scratch.
 
+**Performance:** <br>
 This code enables Pacman to achieve a 100% winrate on the 'smallgrid' map. <br>
 This map is trivial for a human to play, but relatively demanding for a reinforcement learning agent. <br>
 From my own testing, I have found that after 100 training runs, the average win rate is 81%.
@@ -24,6 +25,8 @@ Then type the command below into Terminal:
 python pacman.py -p QLearnAgent -x 500 -n 510 -l smallGrid
 
 This will run 500 training runs, and then demonstrate Pacman playing 10 live games on the map.
+
+You should see a 100% win rate. 
 
 ### The algorithm
 
