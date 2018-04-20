@@ -14,14 +14,13 @@ This is a better result than the standard requirements for the project, which is
 
 ## How to run the code yourself
 
-You will need to copy my file mlLearningAgents.py aswell as all the files in 'Other required files',
+- You will need to copy my file mlLearningAgents.py aswell as all the files in 'Other required files',
 place them into **one** folder.
 
-Then in your Terminal, cd to the required folder.
+- Then in your Terminal, cd to the required folder.
 Make sure your python environment is 2.7, as the code only runs in Python 2.7.
 
-Then type the command below into Terminal:
-
+- Then type the command below into Terminal:
 python pacman.py -p QLearnAgent -x 500 -n 510 -l smallGrid
 
 This will run 500 training runs, and then demonstrate Pacman playing 10 live games on the map.
