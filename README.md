@@ -1,32 +1,46 @@
 # Reinforcement-Learning
 
-This is my solution to the Pacman reinforcement learning project - Included in Berkley's CS188 Artificial Intelligence materials.
+This is my solution to my MSc Coursework in reinforcement learning. You can find the original source materials in Berkley's CS188 Artificial Intelligence course. 
 
-In this project I implemented the Q-Learning reinforcement learning algorithm. 
+In this project I implemented the Q-Learning reinforcement learning algorithm from scratch.
 
-In Q-Learning, the agent aims to learn all the Q-Values. A Q-Value is the value of a state, action pair.
+This code enables Pacman to achieve a 100% winrate on the 'smallgrid' map. <br>
+This map is trivial for a human to play, but relatively demanding for a reinforcement learning agent. <br>
+From my own testing, I have found that after 100 training runs, the average win rate is 81%.
+After 500 training runs, the win rate is 100% everytime. 
 
+This is a better result than the standard requirements for the project, which is that Pacman wins 80% of games after 2000 training runs.
+
+## How to run the code yourself
+
+You will need to copy my file mlLearningAgents.py aswell as all the files in 'Other required files',
+place them into **one** folder.
+
+Then in your Terminal, cd to the required folder.
+Make sure your python environment is 2.7, as the code only runs in Python 2.7.
+
+Then type the command below into Terminal:
+
+python pacman.py -p QLearnAgent -x 500 -n 510 -l smallGrid
+
+This will run 500 training runs, and then demonstrate Pacman playing 10 live games on the map.
+
+### The algorithm
+
+In Q-Learning the aim is to learn 'Q-Values'. A Q-Value is the value of a state, action pair. 
+Once the learning is complete, the agent will then play by picking the action with the highest Q-Value in each state. 
+
+**How are Q-Values learnt?**
+These Q-Values are learnt by playing repeated training runs and updating the Q-Values after each move:
 The update rule for Q-Learning is: <br> 
 **Q(S,a) = Q(S,a) + alpha * (R(S) + gamma * (Max(a)Q(s’,a’) – Q(S,a))**
 
 Where alpha is the learning rate, gamma is the discount factor, R(S) is the reward for state s, and s’ is the subsequent state.
 
 
-### Performance:
-The main metric to evaluate performance is the winrate. <br>
-After just 100 training runs, I found the average winrate to be 81%.
-
-After 500 games, Pacman will never lose a game. 
-
-This is a better result than the standard requirements for the project, which is that Pacman wins 80% of games after 2000 training runs.
-
-### How does reinforcement learning work?
-Reinforcement learning is the branch of machine learning which focuses on how agents can learn how to better perform a specific activity overtime, through many repeated training runs.
-
-The key idea behind reinforcement learing is the use of 'rewards' and 'punishments' for certain outcomes. The agents goal is to figure out how to generate the maximum reward. Over many repeated runs, it begins to learn which sequences of events and which actions, generate more rewards, and which generate poor rewards. It then carries out the actions which lead to better rewards more often. This is the basic idea behind how an agent learns the best strategy overtime. 
 
 
-## My functions:
+## An Explanation of the functions I have written and what they do:
 
 Storage: My Q-Values are stored in self.Q_Table. This is a dictionary. The format is
 {state: {‘North’: Q, ‘East’: Q, ‘South’: Q, ‘West’:Q}}
